@@ -1,0 +1,13 @@
+/**
+  **************************************************************************
+  * @file     readme.txt 
+  * @version  v2.0.0
+  * @date     2022-02-11
+  * @brief    readme
+  **************************************************************************
+  */
+
+  this demo is based on the at-start board, in this demo, shows how to build
+  a app device use hid class protocol. the app demo toggle at-start board led3.
+  for more detailed information. please refer to the application note document
+  AN0007.
