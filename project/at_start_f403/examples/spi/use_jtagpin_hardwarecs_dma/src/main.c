@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     main.c
-  * @version  v2.0.0
-  * @date     2022-02-11
+  * @version  v2.0.1
+  * @date     2022-04-02
   * @brief    main program
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -131,7 +131,7 @@ static void gpio_config(void)
   crm_periph_clock_enable(CRM_IOMUX_PERIPH_CLOCK, TRUE);
   gpio_pin_remap_config(SWJTAG_MUX_010, TRUE);
   gpio_pin_remap_config(SPI1_MUX_01, TRUE);
-  
+
   /* master sck pin */
   gpio_initstructure.gpio_out_type       = GPIO_OUTPUT_PUSH_PULL;
   gpio_initstructure.gpio_pull           = GPIO_PULL_DOWN;

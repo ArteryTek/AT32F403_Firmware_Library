@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
   * @file     xmc_ecc.h
-  * @version  v2.0.0
-  * @date     2022-02-11
+  * @version  v2.0.1
+  * @date     2022-04-02
   * @brief    header file for the nand ecc configuration.
   ******************************************************************************
   *                       Copyright notice & Disclaimer
@@ -198,7 +198,7 @@ typedef struct
 /**
   * @}
   */
-  
+
 extern uint32_t ecc_value_write;
 extern uint32_t ecc_value_read;
 

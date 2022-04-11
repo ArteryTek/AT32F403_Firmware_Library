@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     at32_sdio.h
-  * @version  v2.0.0
-  * @date     2022-02-11
+  * @version  v2.0.1
+  * @date     2022-04-02
   * @brief    this file contains all the functions prototypes for the sd/mmc
   *           card at32_sdio driver firmware library.
   **************************************************************************

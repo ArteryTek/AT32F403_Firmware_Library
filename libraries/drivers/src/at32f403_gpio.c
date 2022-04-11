@@ -1,17 +1,17 @@
 /**
   **************************************************************************
   * @file     at32f403_gpio.c
-  * @version  v2.0.0
-  * @date     2022-02-11
+  * @version  v2.0.1
+  * @date     2022-04-02
   * @brief    contains all the functions for the gpio firmware library
   **************************************************************************
   *                       Copyright notice & Disclaimer
   *
-  * The software Board Support Package (BSP) that is made available to 
-  * download from Artery official website is the copyrighted work of Artery. 
-  * Artery authorizes customers to use, copy, and distribute the BSP 
-  * software and its related documentation for the purpose of design and 
-  * development in conjunction with Artery microcontrollers. Use of the 
+  * The software Board Support Package (BSP) that is made available to
+  * download from Artery official website is the copyrighted work of Artery.
+  * Artery authorizes customers to use, copy, and distribute the BSP
+  * software and its related documentation for the purpose of design and
+  * development in conjunction with Artery microcontrollers. Use of the
   * software is governed by this copyright notice and the following disclaimer.
   *
   * THIS SOFTWARE IS PROVIDED ON "AS IS" BASIS WITHOUT WARRANTIES,
@@ -34,13 +34,13 @@
   * @brief GPIO driver modules
   * @{
   */
-  
+
 #ifdef GPIO_MODULE_ENABLED
 
 /** @defgroup GPIO_private_functions
   * @{
   */
-  
+
 /**
   * @brief  reset the gpio register
   * @param  gpio_x: to select the gpio peripheral.
@@ -102,7 +102,7 @@ void gpio_iomux_reset(void)
 /**
   * @brief  initialize the gpio peripheral.
   * @param  gpio_x: to select the gpio peripheral.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         GPIOA, GPIOB, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG.
   * @param  gpio_init_struct: pointer to gpio init structure.
   * @retval none
@@ -188,10 +188,10 @@ void gpio_default_para_init(gpio_init_type *gpio_init_struct)
 /**
   * @brief  read the specified input port pin.
   * @param  gpio_x: to select the gpio peripheral.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         GPIOA, GPIOB, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG.
   * @param  pins: gpio pin number
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         - GPIO_PINS_0
   *         - GPIO_PINS_1
   *         - GPIO_PINS_2
@@ -229,7 +229,7 @@ flag_status gpio_input_data_bit_read(gpio_type *gpio_x, uint16_t pins)
 /**
   * @brief  read the specified gpio input data port.
   * @param  gpio_x: to select the gpio peripheral.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         GPIOA, GPIOB, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG.
   * @retval gpio input data port value.
   */
@@ -241,10 +241,10 @@ uint16_t gpio_input_data_read(gpio_type *gpio_x)
 /**
   * @brief  read the specified output port pin.
   * @param  gpio_x: to select the gpio peripheral.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         GPIOA, GPIOB, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG.
   * @param  pins: gpio pin number
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         - GPIO_PINS_0
   *         - GPIO_PINS_1
   *         - GPIO_PINS_2
@@ -282,7 +282,7 @@ flag_status gpio_output_data_bit_read(gpio_type *gpio_x, uint16_t pins)
 /**
   * @brief  read the specified gpio ouput data port.
   * @param  gpio_x: to select the gpio peripheral.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         GPIOA, GPIOB, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG.
   * @retval gpio input data port value.
   */
@@ -294,7 +294,7 @@ uint16_t gpio_output_data_read(gpio_type *gpio_x)
 /**
   * @brief  set the selected data port bits.
   * @param  gpio_x: to select the gpio peripheral.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         GPIOA, GPIOB, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG.
   * @param  pins: gpio pin number
   *         parameter can be any combination of gpio_pin_x, gpio_pin_x as following values:
@@ -325,7 +325,7 @@ void gpio_bits_set(gpio_type *gpio_x, uint16_t pins)
 /**
   * @brief  clear the selected data port bits.
   * @param  gpio_x: to select the gpio peripheral.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         GPIOA, GPIOB, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG.
   * @param  pins: gpio pin number
   *         parameter can be any combination of gpio_pin_x, gpio_pin_x as following values:
@@ -356,7 +356,7 @@ void gpio_bits_reset(gpio_type *gpio_x, uint16_t pins)
 /**
   * @brief  set or clear the selected data port bit.
   * @param  gpio_x: to select the gpio peripheral.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         GPIOA, GPIOB, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG.
   * @param  pins: gpio pin number
   *         parameter can be any combination of gpio_pin_x, gpio_pin_x as following values:
@@ -395,7 +395,7 @@ void gpio_bits_write(gpio_type *gpio_x, uint16_t pins, confirm_state bit_state)
 /**
   * @brief  write data to the specified gpio data port.
   * @param  gpio_x: to select the gpio peripheral.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         GPIOA, GPIOB, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG.
   * @param  port_value: specifies the value to be written to the port output data register.
   * @retval none
@@ -408,7 +408,7 @@ void gpio_port_wirte(gpio_type *gpio_x, uint16_t port_value)
 /**
   * @brief  write protect gpio pins configuration registers.
   * @param  gpio_x: to select the gpio peripheral.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         GPIOA, GPIOB, GPIOC, GPIOD, GPIOE, GPIOF, GPIOG.
   * @param  pins: gpio pin number
   *         this parameter can be any combination of the following:
@@ -452,14 +452,14 @@ void gpio_pin_wp_config(gpio_type *gpio_x, uint16_t pins)
   * @brief  select the gpio pin used as event output.
   * @param  gpio_port_source: select the gpio port to be used as source
   *         for event output.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         - GPIO_PORT_SOURCE_GPIOA
   *         - GPIO_PORT_SOURCE_GPIOB
   *         - GPIO_PORT_SOURCE_GPIOC
   *         - GPIO_PORT_SOURCE_GPIOD
   *         - GPIO_PORT_SOURCE_GPIOE
   * @param  gpio_pin_source: specifies the pin for the event output.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         - GPIO_PINS_SOURCE0
   *         - GPIO_PINS_SOURCE1
   *         - GPIO_PINS_SOURCE2
@@ -505,15 +505,15 @@ void gpio_event_output_enable(confirm_state new_state)
 /**
   * @brief  iomux remap and debug i/o configuration.
   * @param  gpio_remap: select the pin to remap.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         - SPI1_MUX_01                   - SPI1_MUX_10                   - I2C1_MUX                     - USART1_MUX
-  *         - USART2_MUX                    - USART3_MUX_01                 - USART3_MUX_11                - TMR1_MUX_01  
-  *         - TMR1_MUX_11                   - TMR2_MUX_01                   - TMR2_MUX_10                  - TMR2_MUX_11 
+  *         - USART2_MUX                    - USART3_MUX_01                 - USART3_MUX_11                - TMR1_MUX_01
+  *         - TMR1_MUX_11                   - TMR2_MUX_01                   - TMR2_MUX_10                  - TMR2_MUX_11
   *         - TMR3_MUX_10                   - TMR3_MUX_11                   - TMR4_MUX                     - CAN_MUX_10
-  *         - CAN_MUX_11                    - PD01_MUX                      - TMR5CH4_MUX                  - ADC1_EXTRGPRE_MUX 
+  *         - CAN_MUX_11                    - PD01_MUX                      - TMR5CH4_MUX                  - ADC1_EXTRGPRE_MUX
   *         - ADC1_EXTRGORD_MUX             - ADC2_EXTRGPRE_MUX             - ADC2_EXTRGORD_MUX            - SWJTAG_MUX_001
   *         - SWJTAG_MUX_010                - SWJTAG_MUX_100
-  *         - TMR15_MUX                     - TMR9_MUX                      - TMR10_MUX                    - TMR11_MUX 
+  *         - TMR15_MUX                     - TMR9_MUX                      - TMR10_MUX                    - TMR11_MUX
   *         - TMR13_MUX                     - TMR14_MUX                     - XMC_NADV_MUX                 - SPI4_MUX
   *         - I2C3_MUX                      - SDIO2_MUX01                   - SDIO2_MUX10                  - SDIO2_MUX11
   *         - EXT_SPIM_EN_MUX
@@ -558,7 +558,7 @@ void gpio_pin_remap_config(uint32_t gpio_remap, confirm_state new_state)
 /**
   * @brief  select the gpio pin used as exint line.
   * @param  gpio_port_source: select the gpio port to be used as source for exint.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         - GPIO_PORT_SOURCE_GPIOA
   *         - GPIO_PORT_SOURCE_GPIOB
   *         - GPIO_PORT_SOURCE_GPIOC
@@ -567,7 +567,7 @@ void gpio_pin_remap_config(uint32_t gpio_remap, confirm_state new_state)
   *         - GPIO_PORT_SOURCE_GPIOF
   *         - GPIO_PORT_SOURCE_GPIOG
   * @param  gpio_pin_source: specifies the pin for the event output.
-  *         this parameter can be one of the following values:  
+  *         this parameter can be one of the following values:
   *         - GPIO_PINS_SOURCE0
   *         - GPIO_PINS_SOURCE1
   *         - GPIO_PINS_SOURCE2

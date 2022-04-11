@@ -1,7 +1,7 @@
 ;**************************************************************************
 ;* @file     startup_at32f403.s
-;* @version  v2.0.0
-;* @date     2022-02-11
+;* @version  v2.0.1
+;* @date     2022-04-02
 ;* @brief    at32f403 startup file for keil
 ;**************************************************************************
 ;
@@ -77,8 +77,8 @@ __Vectors       DCD     __initial_sp                        ; Top of Stack
                 DCD     DMA1_Channel7_IRQHandler            ; DMA1 Channel 7
                 DCD     ADC1_2_IRQHandler                   ; ADC1 & ADC2
                 DCD     USBFS_H_CAN1_TX_IRQHandler          ; USB High Priority or CAN1 TX
-                DCD     USBFS_L_CAN1_RX0_IRQHandler         ; USB Low  Priority or CAN1 RX0 
-                DCD     CAN1_RX1_IRQHandler                 ; CAN1 RX1 
+                DCD     USBFS_L_CAN1_RX0_IRQHandler         ; USB Low  Priority or CAN1 RX0
+                DCD     CAN1_RX1_IRQHandler                 ; CAN1 RX1
                 DCD     CAN1_SE_IRQHandler                  ; CAN1 SE
                 DCD     EXINT9_5_IRQHandler                 ; EXINT Line [9:5]
                 DCD     TMR1_BRK_TMR9_IRQHandler            ; TMR1 Brake and TMR9
@@ -136,7 +136,7 @@ Reset_Handler   PROC
                 EXPORT  Reset_Handler                       [WEAK]
                 IMPORT  __main
                 IMPORT  SystemInit
-; add for extend sram            
+; add for extend sram
                 IMPORT  extend_sram
                 MOV32   R0, #0x20001000
                 MOV     SP, R0
@@ -286,8 +286,8 @@ DMA1_Channel6_IRQHandler
 DMA1_Channel7_IRQHandler
 ADC1_2_IRQHandler
 USBFS_H_CAN1_TX_IRQHandler
-USBFS_L_CAN1_RX0_IRQHandler 
-CAN1_RX1_IRQHandler 
+USBFS_L_CAN1_RX0_IRQHandler
+CAN1_RX1_IRQHandler
 CAN1_SE_IRQHandler
 EXINT9_5_IRQHandler
 TMR1_BRK_TMR9_IRQHandler

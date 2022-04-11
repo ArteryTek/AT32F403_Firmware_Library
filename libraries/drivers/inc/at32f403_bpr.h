@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     at32f403_bpr.h
-  * @version  v2.0.0
-  * @date     2022-02-11
+  * @version  v2.0.1
+  * @date     2022-04-02
   * @brief    at32f403 bpr header file
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -43,19 +43,19 @@ extern "C" {
 /** @addtogroup BPR
   * @{
   */
- 
+
 /** @defgroup BPR_flags_definition
-  * @brief bpr flag  
+  * @brief bpr flag
   * @{
   */
-  
+
 #define BPR_TAMPER_INTERRUPT_FLAG        ((uint32_t)0x00000001) /*!< bpr tamper interrupt flag */
 #define BPR_TAMPER_EVENT_FLAG            ((uint32_t)0x00000002) /*!< bpr tamper event flag */
 
 /**
   * @}
   */
-  
+
 /** @defgroup BPR_exported_types
   * @{
   */
@@ -118,6 +118,7 @@ typedef enum
   BPR_RTC_OUTPUT_CLOCK_CAL_BEFORE        = 0x080, /*!< output clock before calibration */
   BPR_RTC_OUTPUT_ALARM                   = 0x100, /*!< output alarm event with pluse mode */
   BPR_RTC_OUTPUT_SECOND                  = 0x300, /*!< output second event with pluse mode */
+  BPR_RTC_OUTPUT_CLOCK_CAL_AFTER         = 0x480, /*!< output clock after calibration */
 } bpr_rtc_output_type;
 
 /**

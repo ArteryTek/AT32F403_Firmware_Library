@@ -1,7 +1,7 @@
 ;**************************************************************************
 ;* @file     startup_at32f403.s
-;* @version  v2.0.0
-;* @date     2022-02-11
+;* @version  v2.0.1
+;* @date     2022-04-02
 ;* @brief    at32f403 startup file for IAR Systems
 ;**************************************************************************
 ;
@@ -64,8 +64,8 @@ __vector_table
         DCD     DMA1_Channel7_IRQHandler            ; DMA1 Channel 7
         DCD     ADC1_2_IRQHandler                   ; ADC1 & ADC2
         DCD     USBFS_H_CAN1_TX_IRQHandler          ; USB High Priority or CAN1 TX
-        DCD     USBFS_L_CAN1_RX0_IRQHandler         ; USB Low  Priority or CAN1 RX0 
-        DCD     CAN1_RX1_IRQHandler                 ; CAN1 RX1 
+        DCD     USBFS_L_CAN1_RX0_IRQHandler         ; USB Low  Priority or CAN1 RX0
+        DCD     CAN1_RX1_IRQHandler                 ; CAN1 RX1
         DCD     CAN1_SE_IRQHandler                  ; CAN1 SE
         DCD     EXINT9_5_IRQHandler                 ; EXINT Line [9:5]
         DCD     TMR1_BRK_TMR9_IRQHandler            ; TMR1 Brake and TMR9
@@ -272,15 +272,15 @@ ADC1_2_IRQHandler
 USBFS_H_CAN1_TX_IRQHandler
         B USBFS_H_CAN1_TX_IRQHandler
 
-        PUBWEAK USBFS_L_CAN1_RX0_IRQHandler 
+        PUBWEAK USBFS_L_CAN1_RX0_IRQHandler
         SECTION .text:CODE:REORDER:NOROOT(1)
-USBFS_L_CAN1_RX0_IRQHandler 
-        B USBFS_L_CAN1_RX0_IRQHandler 
+USBFS_L_CAN1_RX0_IRQHandler
+        B USBFS_L_CAN1_RX0_IRQHandler
 
-        PUBWEAK CAN1_RX1_IRQHandler 
+        PUBWEAK CAN1_RX1_IRQHandler
         SECTION .text:CODE:REORDER:NOROOT(1)
-CAN1_RX1_IRQHandler 
-        B CAN1_RX1_IRQHandler 
+CAN1_RX1_IRQHandler
+        B CAN1_RX1_IRQHandler
 
         PUBWEAK CAN1_SE_IRQHandler
         SECTION .text:CODE:REORDER:NOROOT(1)
@@ -497,15 +497,15 @@ SPI4_IRQHandler
 TMR15_BRK_IRQHandler
         B TMR15_BRK_IRQHandler
 
-        PUBWEAK TMR15_OVF_IRQHandler 
+        PUBWEAK TMR15_OVF_IRQHandler
         SECTION .text:CODE:REORDER:NOROOT(1)
-TMR15_OVF_IRQHandler 
-        B TMR15_OVF_IRQHandler 
+TMR15_OVF_IRQHandler
+        B TMR15_OVF_IRQHandler
 
-        PUBWEAK TMR15_TRG_HALL_IRQHandler 
+        PUBWEAK TMR15_TRG_HALL_IRQHandler
         SECTION .text:CODE:REORDER:NOROOT(1)
-TMR15_TRG_HALL_IRQHandler 
-        B TMR15_TRG_HALL_IRQHandler 
+TMR15_TRG_HALL_IRQHandler
+        B TMR15_TRG_HALL_IRQHandler
 
         PUBWEAK TMR15_CH_IRQHandler
         SECTION .text:CODE:REORDER:NOROOT(1)

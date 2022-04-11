@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     main.c
-  * @version  v2.0.0
-  * @date     2022-02-11
+  * @version  v2.0.1
+  * @date     2022-04-02
   * @brief    main program
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -192,7 +192,7 @@ int main(void)
 
       /* enter deep sleep mode */
       pwc_deep_sleep_mode_enter(PWC_DEEP_SLEEP_ENTER_WFI);
-      /* wait clock stable */ 
+      /* wait clock stable */
       for(index = 0; index < 600; index++)
       {
         __NOP();
