@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     touch.h
-  * @version  v2.0.1
-  * @date     2022-04-02
+  * @version  v2.0.2
+  * @date     2022-05-20
   * @brief    this file contains all the functions prototypes for the
   *           touch firmware driver.
   **************************************************************************

@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     main.c
-  * @version  v2.0.1
-  * @date     2022-04-02
+  * @version  v2.0.2
+  * @date     2022-05-20
   * @brief    main program
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -67,7 +67,6 @@ int main(void)
   lcd_struct->lcd_clear(point_color);
 
   touch_struct->init();
-  touch_struct->touch_read_xy(&touch_struct->x_p[0], &touch_struct->y_p[0]);
 
   while(1)
   {

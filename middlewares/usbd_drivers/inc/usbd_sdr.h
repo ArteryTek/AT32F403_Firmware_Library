@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     usbd_sdr.h
-  * @version  v2.0.1
-  * @date     2022-04-02
+  * @version  v2.0.2
+  * @date     2022-05-20
   * @brief    usb standard request header file
   **************************************************************************
   *                       Copyright notice & Disclaimer

@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     xmc_nand.c
-  * @version  v2.0.1
-  * @date     2022-04-02
+  * @version  v2.0.2
+  * @date     2022-05-20
   * @brief    nand configuration
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -165,7 +165,6 @@ uint32_t nand_write_small_page(uint8_t *pbuffer, nand_address_type address_struc
   while((num_page_to_write != 0x00) && (address_status == NAND_VALID_ADDRESS) && (status == NAND_READY))
   {
     /* page write command and address */
-    *(__IO uint8_t *)(Bank_NAND_ADDR | CMD_AREA) = NAND_CMD_AREA_A;
     *(__IO uint8_t *)(Bank_NAND_ADDR | CMD_AREA) = NAND_CMD_WRITE0;
 #ifdef H27U1G8F2CTR
     *(__IO uint8_t *)(Bank_NAND_ADDR | ADDR_AREA) = addr_1st_cycle(COL_ADDRESS);
@@ -291,7 +290,6 @@ uint32_t nand_write_spare_area(uint8_t *pbuffer, nand_address_type address_struc
   while((num_spare_area_to_write != 0x00) && (address_status == NAND_VALID_ADDRESS) && (status == NAND_READY))
   {
     /* page write spare area command and address */
-    *(__IO uint8_t *)(Bank_NAND_ADDR | CMD_AREA) = NAND_CMD_AREA_C;
     *(__IO uint8_t *)(Bank_NAND_ADDR | CMD_AREA) = NAND_CMD_WRITE0;
 
     *(__IO uint8_t *)(Bank_NAND_ADDR | ADDR_AREA) = addr_1st_cycle(COL_ADDRESS);

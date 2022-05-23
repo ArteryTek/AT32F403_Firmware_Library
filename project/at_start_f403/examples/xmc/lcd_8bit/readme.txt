@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     readme.txt 
-  * @version  v2.0.1
-  * @date     2022-04-02
+  * @version  v2.0.2
+  * @date     2022-05-20
   * @brief    readme
   **************************************************************************
   */
@@ -26,5 +26,5 @@
 	xmc_d5	  pe8	    data[5]
 	xmc_d6	  pe9	    data[6]
 	xmc_d7	  pe10	  data[7]	
-
+  for more detailed information. please refer to the application note document AN0106.
 

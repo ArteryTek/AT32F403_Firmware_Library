@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     at32f403_tmr.h
-  * @version  v2.0.1
-  * @date     2022-04-02
+  * @version  v2.0.2
+  * @date     2022-05-20
   * @brief    at32f403 tmr header file
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -843,6 +843,7 @@ typedef struct
 #define TMR12                            ((tmr_type *) TMR12_BASE)
 #define TMR13                            ((tmr_type *) TMR13_BASE)
 #define TMR14                            ((tmr_type *) TMR14_BASE)
+#define TMR15                            ((tmr_type *) TMR15_BASE)
 
 /** @defgroup TMR_exported_functions
   * @{

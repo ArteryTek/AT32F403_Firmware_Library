@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     at32f403_can.c
-  * @version  v2.0.1
-  * @date     2022-04-02
+  * @version  v2.0.2
+  * @date     2022-05-20
   * @brief    contains all the functions for the can firmware library
   **************************************************************************
   *                       Copyright notice & Disclaimer

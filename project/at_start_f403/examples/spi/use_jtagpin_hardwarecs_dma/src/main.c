@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     main.c
-  * @version  v2.0.1
-  * @date     2022-04-02
+  * @version  v2.0.2
+  * @date     2022-05-20
   * @brief    main program
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -180,6 +180,10 @@ int main(void)
 {
   system_clock_config();
   at32_board_init();
+  
+  /* button press:ensure code canbe download normally */
+  while(at32_button_press() == NO_BUTTON);
+  
   gpio_config();
   spi_config();
   dma_channel_enable(DMA1_CHANNEL4, TRUE);

@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     at32f403_tmr.c
-  * @version  v2.0.1
-  * @date     2022-04-02
+  * @version  v2.0.2
+  * @date     2022-05-20
   * @brief    contains all the functions for the tmr firmware library
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -46,7 +46,7 @@
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @retval none
   */
 void tmr_reset(tmr_type *tmr_x)
@@ -128,7 +128,7 @@ void tmr_reset(tmr_type *tmr_x)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  new_state (TRUE or FALSE)
   * @retval none
   */
@@ -191,7 +191,7 @@ void tmr_brkdt_default_para_init(tmr_brkdt_config_type *tmr_brkdt_struct)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_pr (for 16 bit tmr 0x0000~0xFFFF,
   *                  for 32 bit tmr 0x0000_0000~0xFFFF_FFFF)
   * @param  tmr_div (timer div value:0x0000~0xFFFF)
@@ -214,7 +214,7 @@ void tmr_base_init(tmr_type* tmr_x, uint32_t tmr_pr, uint32_t tmr_div)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_clock_div
   *         this parameter can be one of the following values:
   *         - TMR_CLOCK_DIV1
@@ -233,7 +233,7 @@ void tmr_clock_source_div_set(tmr_type *tmr_x, tmr_clock_division_type tmr_clock
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_cnt_dir
   *         this parameter can be one of the following values:
   *         - TMR_COUNT_UP
@@ -253,7 +253,7 @@ void tmr_cnt_dir_set(tmr_type *tmr_x, tmr_count_mode_type tmr_cnt_dir)
   * @brief  set the repetition counter register(rpr) value
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR8
+  *         TMR1, TMR8, TMR15
   * @param  tmr_rpr_value (0x00~0xFF)
   * @retval none
   */
@@ -272,7 +272,7 @@ void tmr_repetition_counter_set(tmr_type *tmr_x, uint8_t tmr_rpr_value)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_cnt_value (for 16 bit tmr 0x0000~0xFFFF,
   *                        for 32 bit tmr 0x0000_0000~0xFFFF_FFFF)
   * @retval none
@@ -288,7 +288,7 @@ void tmr_counter_value_set(tmr_type *tmr_x, uint32_t tmr_cnt_value)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @retval tmr counter value
   */
 uint32_t tmr_counter_value_get(tmr_type *tmr_x)
@@ -301,7 +301,7 @@ uint32_t tmr_counter_value_get(tmr_type *tmr_x)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_div_value (for 16 bit tmr 0x0000~0xFFFF,
   *                        for 32 bit tmr 0x0000_0000~0xFFFF_FFFF)
   * @retval none
@@ -317,7 +317,7 @@ void tmr_div_value_set(tmr_type *tmr_x, uint32_t tmr_div_value)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @retval tmr div value
   */
 uint32_t tmr_div_value_get(tmr_type *tmr_x)
@@ -330,7 +330,7 @@ uint32_t tmr_div_value_get(tmr_type *tmr_x)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_channel
   *         this parameter can be one of the following values:
   *         - TMR_SELECT_CHANNEL_1
@@ -428,7 +428,7 @@ void tmr_output_channel_config(tmr_type *tmr_x, tmr_channel_select_type tmr_chan
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_channel
   *         this parameter can be one of the following values:
   *         - TMR_SELECT_CHANNEL_1
@@ -481,7 +481,7 @@ void tmr_output_channel_mode_select(tmr_type *tmr_x, tmr_channel_select_type tmr
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_pr_value: timer period register value of counter
   *                       (for 16 bit tmr 0x0000~0xFFFF,
   *                       for 32 bit tmr 0x0000_0000~0xFFFF_FFFF)
@@ -498,7 +498,7 @@ void tmr_period_value_set(tmr_type *tmr_x, uint32_t tmr_pr_value)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @retval timer period register value of counter
   *         (for 16 bit tmr 0x0000~0xFFFF, for 32 bit tmr
   *         0x0000_0000~0xFFFF_FFFF)
@@ -513,7 +513,7 @@ uint32_t tmr_period_value_get(tmr_type *tmr_x)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_channel
   *         this parameter can be one of the following values:
   *         - TMR_SELECT_CHANNEL_1
@@ -560,7 +560,7 @@ void tmr_channel_value_set(tmr_type *tmr_x, tmr_channel_select_type tmr_channel,
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_channel
   *         this parameter can be one of the following values:
   *         - TMR_SELECT_CHANNEL_1
@@ -606,7 +606,7 @@ uint32_t tmr_channel_value_get(tmr_type *tmr_x, tmr_channel_select_type tmr_chan
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  new_state (TRUE or FALSE)
   * @retval none
   */
@@ -621,7 +621,7 @@ void tmr_period_buffer_enable(tmr_type *tmr_x, confirm_state new_state)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_channel
   *         this parameter can be one of the following values:
   *         - TMR_SELECT_CHANNEL_1
@@ -667,7 +667,7 @@ void tmr_output_channel_buffer_enable(tmr_type *tmr_x, tmr_channel_select_type t
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_channel
   *         this parameter can be one of the following values:
   *         - TMR_SELECT_CHANNEL_1
@@ -713,7 +713,7 @@ void tmr_output_channel_immediately_set(tmr_type *tmr_x, tmr_channel_select_type
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_channel
   *         this parameter can be one of the following values:
   *         - TMR_SELECT_CHANNEL_1
@@ -758,7 +758,7 @@ void tmr_output_channel_switch_set(tmr_type *tmr_x, tmr_channel_select_type tmr_
   * @brief  enable or disable tmr one cycle mode
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8, TMR9, TMR12
+  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8, TMR9, TMR12, TMR15
   * @param  new_state (TRUE or FALSE)
   * @retval none
   */
@@ -790,7 +790,7 @@ void tmr_32_bit_function_enable (tmr_type *tmr_x, confirm_state new_state)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  new_state (TRUE or FALSE)
   * @retval none
   */
@@ -804,7 +804,7 @@ void tmr_overflow_request_source_set(tmr_type *tmr_x, confirm_state new_state)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  new_state (TRUE or FALSE)
   * @retval none
   */
@@ -818,7 +818,7 @@ void tmr_overflow_event_disable(tmr_type *tmr_x, confirm_state new_state)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  input_struct
   *         - to the structure of tmr_input_config_type
   * @param  divider_factor
@@ -884,7 +884,7 @@ void tmr_input_channel_init(tmr_type *tmr_x, tmr_input_config_type *input_struct
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_channel
   *         this parameter can be one of the following values:
   *         - TMR_SELECT_CHANNEL_1
@@ -943,7 +943,7 @@ void tmr_channel_enable(tmr_type *tmr_x, tmr_channel_select_type tmr_channel, co
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_channel
   *         this parameter can be one of the following values:
   *         - TMR_SELECT_CHANNEL_1
@@ -988,7 +988,7 @@ void tmr_input_channel_filter_set(tmr_type *tmr_x, tmr_channel_select_type tmr_c
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  input_struct
   *         - to the structure of tmr_input_config_type
   * @param  divider_factor
@@ -1100,7 +1100,7 @@ void tmr_pwm_input_config(tmr_type *tmr_x, tmr_input_config_type *input_struct,
   * @brief  select tmr channel1 input
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8
+  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR15
   * @param  ti1_connect
   *         this parameter can be one of the following values:
   *         - TMR_CHANEL1_CONNECTED_C1IRAW
@@ -1117,7 +1117,7 @@ void tmr_channel1_input_select(tmr_type *tmr_x, tmr_channel1_input_connected_typ
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_channel
   *         this parameter can be one of the following values:
   *         - TMR_SELECT_CHANNEL_1
@@ -1166,7 +1166,7 @@ void tmr_input_channel_divider_set(tmr_type *tmr_x, tmr_channel_select_type tmr_
   * @brief  select tmr primary mode
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8
+  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8, TMR15
   * @param  primary_mode
   *         this parameter can be one of the following values:
   *         - TMR_PRIMARY_SEL_RESET
@@ -1188,7 +1188,7 @@ void tmr_primary_mode_select(tmr_type *tmr_x, tmr_primary_select_type primary_mo
   * @brief  select tmr subordinate mode
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR12
+  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR12, TMR15
   * @param  sub_mode
   *         this parameter can be one of the following values:
   *         - TMR_SUB_MODE_DIABLE
@@ -1210,7 +1210,7 @@ void tmr_sub_mode_select(tmr_type *tmr_x, tmr_sub_mode_select_type sub_mode)
   * @brief  select tmr channel dma
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR12
+  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR12, TMR15
   * @param  cc_dma_select
   *         this parameter can be one of the following values:
   *         - TMR_DMA_REQUEST_BY_CHANNEL
@@ -1226,7 +1226,7 @@ void tmr_channel_dma_select(tmr_type *tmr_x, tmr_dma_request_source_type cc_dma_
   * @brief  select tmr hall
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR8
+  *         TMR1, TMR8, TMR15
   * @param  new_state (TRUE or FALSE)
   * @retval none
   */
@@ -1239,7 +1239,7 @@ void tmr_hall_select(tmr_type *tmr_x,  confirm_state new_state)
   * @brief  enable tmr channel buffer
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR8
+  *         TMR1, TMR8, TMR15
   * @param  new_state (TRUE or FALSE)
   * @retval none
   */
@@ -1252,7 +1252,7 @@ void tmr_channel_buffer_enable(tmr_type *tmr_x, confirm_state new_state)
   * @brief  select tmr sub-trigger
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR12
+  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR12, TMR15
   * @param  trigger_select
   *         this parameter can be one of the following values:
   *         - TMR_SUB_INPUT_SEL_IS0
@@ -1274,7 +1274,7 @@ void tmr_trigger_input_select(tmr_type *tmr_x, sub_tmr_input_sel_type trigger_se
   * @brief  set tmr subordinate synchronization mode
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR12
+  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR12, TMR15
   * @param  new_state (TRUE or FALSE)
   * @retval none
   */
@@ -1288,7 +1288,7 @@ void tmr_sub_sync_mode_set(tmr_type *tmr_x, confirm_state new_state)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  dma_request
   *         this parameter can be one of the following values:
   *         - TMR_OVERFLOW_DMA_REQUEST
@@ -1318,7 +1318,7 @@ void tmr_dma_request_enable(tmr_type *tmr_x, tmr_dma_request_type dma_request, c
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_interrupt
   *         this parameter can be one of the following values:
   *         - TMR_OVF_INT
@@ -1349,7 +1349,7 @@ void tmr_interrupt_enable(tmr_type *tmr_x, uint32_t tmr_interrupt, confirm_state
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_flag
   *         this parameter can be one of the following values:
   *         - TMR_OVF_FLAG
@@ -1387,7 +1387,7 @@ flag_status tmr_flag_get(tmr_type *tmr_x, uint32_t tmr_flag)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_flag
   *         this parameter can be any combination of the following values:
   *         - TMR_OVF_FLAG
@@ -1414,7 +1414,7 @@ void tmr_flag_clear(tmr_type *tmr_x, uint32_t tmr_flag)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR6, TMR7, TMR8,
-  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14
+  *         TMR9, TMR10, TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_event
   *         this parameter can be one of the following values:
   *         - TMR_OVERFLOW_SWTRIG
@@ -1436,7 +1436,7 @@ void tmr_event_sw_trigger(tmr_type *tmr_x, tmr_event_trigger_type tmr_event)
   * @brief  tmr output enable(oen),this function is important for advtm output enable
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR8
+  *         TMR1, TMR8, TMR15
   * @param  new_state (TRUE or FALSE)
   * @retval none
   */
@@ -1449,7 +1449,7 @@ void tmr_output_enable(tmr_type *tmr_x, confirm_state new_state)
   * @brief  set tmr select internal clock
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR12
+  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR12, TMR15
   * @retval none
   */
 void tmr_internal_clock_set(tmr_type *tmr_x)
@@ -1462,7 +1462,7 @@ void tmr_internal_clock_set(tmr_type *tmr_x)
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_channel
   *         this parameter can be one of the following values:
   *         - TMR_SELECT_CHANNEL_1
@@ -1524,7 +1524,7 @@ void tmr_output_channel_polarity_set(tmr_type *tmr_x, tmr_channel_select_type tm
   * @brief  config tmr external clock
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8
+  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR15
   * @param  es_divide
   *         this parameter can be one of the following values:
   *         - TMR_ES_FREQUENCY_DIV_1
@@ -1550,7 +1550,7 @@ void tmr_external_clock_config(tmr_type *tmr_x, tmr_external_signal_divider_type
   * @brief  config tmr external clock mode1
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR12
+  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR12, TMR15
   * @param  es_divide
   *         this parameter can be one of the following values:
   *         - TMR_ES_FREQUENCY_DIV_1
@@ -1576,7 +1576,7 @@ void tmr_external_clock_mode1_config(tmr_type *tmr_x, tmr_external_signal_divide
   * @brief  config tmr external clock mode2
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8
+  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR15
   * @param  es_divide
   *         this parameter can be one of the following values:
   *         - TMR_ES_FREQUENCY_DIV_1
@@ -1601,7 +1601,7 @@ void tmr_external_clock_mode2_config(tmr_type *tmr_x, tmr_external_signal_divide
   * @brief  config tmr encoder mode
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8
+  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR15
   * @param  encoder_mode
   *         this parameter can be one of the following values:
   *         - TMR_ENCODER_MODE_A
@@ -1642,7 +1642,7 @@ void tmr_encoder_mode_config(tmr_type *tmr_x, tmr_encoder_mode_type encoder_mode
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
   *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR9, TMR10,
-  *         TMR11, TMR12, TMR13, TMR14
+  *         TMR11, TMR12, TMR13, TMR14, TMR15
   * @param  tmr_channel
   *         this parameter can be one of the following values:
   *         - TMR_SELECT_CHANNEL_1
@@ -1689,7 +1689,7 @@ void tmr_force_output_set(tmr_type *tmr_x,  tmr_channel_select_type tmr_channel,
   * @brief  config tmr dma control
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8
+  *         TMR1, TMR2, TMR3, TMR4, TMR5, TMR8, TMR15
   * @param  dma_length
   *         this parameter can be one of the following values:
   *         - TMR_DMA_TRANSFER_1BYTE
@@ -1732,7 +1732,7 @@ void tmr_dma_control_config(tmr_type *tmr_x, tmr_dma_transfer_length_type dma_le
   * @brief  config tmr break mode and dead-time
   * @param  tmr_x: select the tmr peripheral.
   *         this parameter can be one of the following values:
-  *         TMR1, TMR8
+  *         TMR1, TMR8, TMR15
   * @param  brkdt_struct
   *         - to the structure of tmr_brkdt_config_type
   * @retval none
