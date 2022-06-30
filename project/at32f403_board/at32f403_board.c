@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     at32f403_board.c
-  * @version  v2.0.2
-  * @date     2022-05-20
+  * @version  v2.0.3
+  * @date     2022-06-28
   * @brief    set of firmware functions to manage leds and push-button.
   *           initialize delay function.
   **************************************************************************

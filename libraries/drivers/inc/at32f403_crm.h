@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     at32f403_crm.h
-  * @version  v2.0.2
-  * @date     2022-05-20
+  * @version  v2.0.3
+  * @date     2022-06-28
   * @brief    at32f403 crm header file
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -817,8 +817,6 @@ crm_sclk_type crm_sysclk_switch_status_get(void);
 void crm_clocks_freq_get(crm_clocks_freq_type *clocks_struct);
 void crm_clock_out_set(crm_clkout_select_type clkout);
 void crm_interrupt_enable(uint32_t crm_int, confirm_state new_state);
-void crm_usb_interrupt_remapping_set(crm_usb_int_map_type int_remap);
-void crm_usb_clock_source_select(crm_usb_clock_source_type value);
 
 /**
   * @}

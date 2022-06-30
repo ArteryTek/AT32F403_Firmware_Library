@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     main.c
-  * @version  v2.0.2
-  * @date     2022-05-20
+  * @version  v2.0.3
+  * @date     2022-06-28
   * @brief    main program
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -143,6 +143,10 @@ static void sclk_192m_hick_config(void)
 
   /* 1step: config ahbclk div8 */
   crm_ahb_div_set(CRM_AHB_DIV_8);
+
+  crm_apb2_div_set(CRM_APB2_DIV_2);
+
+  crm_apb1_div_set(CRM_APB1_DIV_2);
 
   /* select pll as system clock source */
   crm_sysclk_switch(CRM_SCLK_PLL);

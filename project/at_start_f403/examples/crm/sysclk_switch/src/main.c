@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     main.c
-  * @version  v2.0.2
-  * @date     2022-05-20
+  * @version  v2.0.3
+  * @date     2022-06-28
   * @brief    main program
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -154,6 +154,9 @@ static void sclk_64m_hick_config(void)
   while(crm_sysclk_switch_status_get() != CRM_SCLK_PLL)
   {
   }
+
+  /* delay */
+  wait_stbl(PLL_STABLE_DELAY);
 
   /* update system_core_clock global variable */
   system_core_clock_update();
