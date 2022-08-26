@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     main.c
-  * @version  v2.0.3
-  * @date     2022-06-28
+  * @version  v2.0.4
+  * @date     2022-08-16
   * @brief    main program
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -177,10 +177,7 @@ int main(void)
     at32_led_on(LED2);
 
     /* wait clock stable */
-    for(index = 0; index < 600; index++)
-    {
-      __NOP();
-    }
+    delay_us(120);
 
     /* wake up from deep sleep mode, congfig the system clock */
     system_clock_recover();

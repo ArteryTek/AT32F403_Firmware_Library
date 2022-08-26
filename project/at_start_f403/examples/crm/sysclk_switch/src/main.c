@@ -1,8 +1,8 @@
 /**
   **************************************************************************
   * @file     main.c
-  * @version  v2.0.3
-  * @date     2022-06-28
+  * @version  v2.0.4
+  * @date     2022-08-16
   * @brief    main program
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -49,7 +49,7 @@ static void switch_system_clock(void);
   */
 static void wait_stbl(uint32_t delay)
 {
-  uint32_t i;
+  volatile uint32_t i;
 
   for(i = 0; i < delay; i++);
 }
