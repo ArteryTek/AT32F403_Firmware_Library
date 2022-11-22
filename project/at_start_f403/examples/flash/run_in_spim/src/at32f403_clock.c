@@ -1,8 +1,6 @@
 /**
   **************************************************************************
   * @file     at32f403_clock.c
-  * @version  v2.0.4
-  * @date     2022-08-16
   * @brief    system clock config program
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -84,10 +82,10 @@ void system_clock_config(void)
   {
   }
 
-  /* config apb2clk */
+  /* config apb2clk, the maximum frequency of APB1/APB2 clock is 100 MHz  */
   crm_apb2_div_set(CRM_APB2_DIV_2);
 
-  /* config apb1clk */
+  /* config apb1clk, the maximum frequency of APB1/APB2 clock is 100 MHz  */
   crm_apb1_div_set(CRM_APB1_DIV_2);
 
   /* 1step: config ahbclk div8 */

@@ -1,8 +1,6 @@
 /**
   **************************************************************************
   * @file     at32f403_sdio.h
-  * @version  v2.0.4
-  * @date     2022-08-16
   * @brief    at32f403 sdio header file
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -568,8 +566,9 @@ typedef struct
 /**
   * @}
   */
-
+#if defined (AT32F403Zx) || defined (AT32F403Vx) || defined (AT32F403Rx)
 #define SDIO1                            ((sdio_type *) SDIO1_BASE)
+#endif
 #define SDIO2                            ((sdio_type *) SDIO2_BASE)
 
 /** @defgroup SDIO_exported_functions

@@ -1,8 +1,6 @@
 /**
   **************************************************************************
   * @file     rtc.h
-  * @version  v2.0.4
-  * @date     2022-08-16
   * @brief    this file provides template for calendar api.
   **************************************************************************
   *                       Copyright notice & Disclaimer

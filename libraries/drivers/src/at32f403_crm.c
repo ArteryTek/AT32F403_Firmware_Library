@@ -1,8 +1,6 @@
 /**
   **************************************************************************
   * @file     at32f403_crm.c
-  * @version  v2.0.4
-  * @date     2022-08-16
   * @brief    contains all the functions for the crm firmware library
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -54,6 +52,9 @@ void crm_reset(void)
 
   /* wait hick stable */
   while(CRM->ctrl_bit.hickstbl != SET);
+
+  /* switch system clock(high to low) in smooth going  */
+  CRM->cfg_bit.ahbdiv = CRM_AHB_DIV_512;
 
   /* hick used as system clock */
   CRM->cfg_bit.sclksel = CRM_SCLK_HICK;
@@ -419,6 +420,7 @@ void crm_ahb_div_set(crm_ahb_div_type value)
 
 /**
   * @brief  set crm apb1 division
+  * @note   the maximum frequency of APB1/APB2 clock is 100 MHz
   * @param  value
   *         this parameter can be one of the following values:
   *         - CRM_APB1_DIV_1
@@ -435,6 +437,7 @@ void crm_apb1_div_set(crm_apb1_div_type value)
 
 /**
   * @brief  set crm apb2 division
+  * @note   the maximum frequency of APB1/APB2 clock is 100 MHz
   * @param  value
   *         this parameter can be one of the following values:
   *         - CRM_APB2_DIV_1

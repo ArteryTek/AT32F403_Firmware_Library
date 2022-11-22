@@ -1,8 +1,6 @@
 /**
   **************************************************************************
   * @file     wdt_standby/readme.txt 
-  * @version  v2.0.4
-  * @date     2022-08-16
   * @brief    readme
   **************************************************************************
   */
@@ -11,4 +9,4 @@
   from standby mode. if the chip is wakeup from standby mode by wdt, led4 
   will be on.for more detailed information. please refer to the application 
   note document AN0045.
-  
+  

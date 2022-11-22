@@ -1,8 +1,6 @@
 /**
   ******************************************************************************
   * @file     readme.txt
-  * @version  v2.0.4
-  * @date     2022-08-16
   * @brief    readme
   ******************************************************************************
   */
@@ -56,4 +54,4 @@
   - xmc_nadv                    pb7          --->   adv#
   - xmc_noe                     pd4          --->   oe#  
   - xmc_nwe                     pd5          --->   we#
-  for more detailed information. please refer to the application note document AN0106.
+  for more detailed information. please refer to the application note document AN0106.

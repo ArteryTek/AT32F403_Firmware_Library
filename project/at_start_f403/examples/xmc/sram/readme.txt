@@ -1,8 +1,6 @@
 /**
   ******************************************************************************
   * @file     readme.txt
-  * @version  v2.0.4
-  * @date     2022-08-16
   * @brief    readme
   ******************************************************************************
   */
@@ -58,4 +56,4 @@
   - xmc_nwe                     pd5          --->   we#
   - xmc_lb                      pe0          --->   lb#
   - xmc_ub                      pe1          --->   ub#
-  for more detailed information. please refer to the application note document AN0106.
+  for more detailed information. please refer to the application note document AN0106.

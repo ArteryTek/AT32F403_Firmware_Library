@@ -1,8 +1,6 @@
 /**
   **************************************************************************
   * @file     at32f403_sdio.c
-  * @version  v2.0.4
-  * @date     2022-08-16
   * @brief    contains all the functions for the sdio firmware library
   **************************************************************************
   *                       Copyright notice & Disclaimer

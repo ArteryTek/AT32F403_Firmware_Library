@@ -1,8 +1,6 @@
 /**
   **************************************************************************
   * @file     at32f403_spi.c
-  * @version  v2.0.4
-  * @date     2022-08-16
   * @brief    contains all the functions for the spi firmware library
   **************************************************************************
   *                       Copyright notice & Disclaimer
@@ -65,11 +63,13 @@ void spi_i2s_reset(spi_type *spi_x)
     crm_periph_reset(CRM_SPI3_PERIPH_RESET, TRUE);
     crm_periph_reset(CRM_SPI3_PERIPH_RESET, FALSE);
   }
+#if defined (AT32F403Zx) || defined (AT32F403Vx)
   else if(spi_x == SPI4)
   {
     crm_periph_reset(CRM_SPI4_PERIPH_RESET, TRUE);
     crm_periph_reset(CRM_SPI4_PERIPH_RESET, FALSE);
   }
+#endif
 }
 
 /**
