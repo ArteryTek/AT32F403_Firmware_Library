@@ -132,7 +132,7 @@ void dma_configuration(void)
   dma_init_struct.loop_mode_enable = FALSE;
   dma_init(DMA1_CHANNEL7, &dma_init_struct);
 
-  /* enable transfer full data intterrupt */
+  /* enable transfer full data interrupt */
   dma_interrupt_enable(DMA1_CHANNEL7, DMA_FDT_INT, TRUE);
 
   /* dma1 channel1 interrupt nvic init */
@@ -153,7 +153,7 @@ void dma_configuration(void)
   dma_init_struct.loop_mode_enable = FALSE;
   dma_init(DMA1_CHANNEL6, &dma_init_struct);
 
-  /* enable transfer full data intterrupt */
+  /* enable transfer full data interrupt */
   dma_interrupt_enable(DMA1_CHANNEL6, DMA_FDT_INT, TRUE);
 
   /* dma1 channel6 interrupt nvic init */
@@ -174,7 +174,7 @@ void dma_configuration(void)
   dma_init_struct.loop_mode_enable = FALSE;
   dma_init(DMA1_CHANNEL2, &dma_init_struct);
 
-  /* enable transfer full data intterrupt */
+  /* enable transfer full data interrupt */
   dma_interrupt_enable(DMA1_CHANNEL2, DMA_FDT_INT, TRUE);
 
   /* dma1 channel2 interrupt nvic init */
@@ -195,7 +195,7 @@ void dma_configuration(void)
   dma_init_struct.loop_mode_enable = FALSE;
   dma_init(DMA1_CHANNEL3, &dma_init_struct);
 
-  /* enable transfer full data intterrupt */
+  /* enable transfer full data interrupt */
   dma_interrupt_enable(DMA1_CHANNEL3, DMA_FDT_INT, TRUE);
 
   /* dma1 channel3 interrupt nvic init */

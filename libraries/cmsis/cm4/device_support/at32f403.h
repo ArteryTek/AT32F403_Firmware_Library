@@ -68,6 +68,9 @@ extern "C" {
     #define AT32F403xx
 #endif
 
+/**
+  * define with package
+  */
 #if defined (AT32F403ZCT6) || defined (AT32F403ZET6) || defined (AT32F403ZGT6)
 
     #define AT32F403Zx
@@ -89,6 +92,27 @@ extern "C" {
     #define AT32F403Cx
 #endif
 
+/**
+  * define with memory density
+  */
+#if defined (AT32F403CCT6) || defined (AT32F403RCT6) || defined (AT32F403VCT6) || \
+    defined (AT32F403ZCT6) || defined (AT32F403CCU6)
+
+    #define AT32F403xC
+#endif
+
+#if defined (AT32F403CET6) || defined (AT32F403RET6) || defined (AT32F403VET6) || \
+    defined (AT32F403ZET6) || defined (AT32F403CEU6)
+
+    #define AT32F403xE
+#endif
+
+#if defined (AT32F403CGT6) || defined (AT32F403RGT6) || defined (AT32F403VGT6) || \
+    defined (AT32F403ZGT6) || defined (AT32F403CGU6)
+
+    #define AT32F403xG
+#endif
+
 #ifndef USE_STDPERIPH_DRIVER
 /**
   * @brief comment the line below if you will not use the peripherals drivers.
@@ -108,7 +132,7 @@ extern "C" {
   */
 #define __AT32F403_LIBRARY_VERSION_MAJOR    (0x02) /*!< [31:24] major version */
 #define __AT32F403_LIBRARY_VERSION_MIDDLE   (0x00) /*!< [23:16] middle version */
-#define __AT32F403_LIBRARY_VERSION_MINOR    (0x06) /*!< [15:8]  minor version */
+#define __AT32F403_LIBRARY_VERSION_MINOR    (0x07) /*!< [15:8]  minor version */
 #define __AT32F403_LIBRARY_VERSION_RC       (0x00) /*!< [7:0]  release candidate */
 #define __AT32F403_LIBRARY_VERSION          ((__AT32F403_LIBRARY_VERSION_MAJOR << 24)  | \
                                              (__AT32F403_LIBRARY_VERSION_MIDDLE << 16) | \

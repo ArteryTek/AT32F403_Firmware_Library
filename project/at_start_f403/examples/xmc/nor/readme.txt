@@ -54,4 +54,4 @@
   - xmc_nadv                    pb7          --->   adv#
   - xmc_noe                     pd4          --->   oe#  
   - xmc_nwe                     pd5          --->   we#
-  for more detailed information. please refer to the application note document AN0106.
+  for more detailed information. please refer to the application note document AN0106.

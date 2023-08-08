@@ -34,11 +34,11 @@ extern "C" {
 #include "at32f403_board.h"
 #include "stdio.h"
 
-/** @addtogroup AT32F403_periph_examples
+/** @addtogroup UTILITIES_examples
   * @{
   */
 
-/** @addtogroup 403_USB_device_hid_iap
+/** @addtogroup USB_iap_bootloader
   * @{
   */
 
