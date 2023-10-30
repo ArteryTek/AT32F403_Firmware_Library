@@ -10,7 +10,7 @@
   operations on the nor flash.
   usart1 using pa9 to printf the result.
 
-    xmc                         at32f403            nor
+    xmc                                             nor
   - xmc_d0                      pd14         --->   dq[0]
   - xmc_d1                      pd15         --->   dq[1]
   - xmc_d2                      pd0          --->   dq[2]

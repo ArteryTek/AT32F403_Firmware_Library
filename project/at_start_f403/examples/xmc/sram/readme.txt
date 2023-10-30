@@ -10,7 +10,7 @@
   operations on the sram memory ISSI.
   usart1 using pa9 to printf the result.
 
-    xmc                         at32f403            sram
+    xmc                                             sram
   - xmc_d0                      pd14         --->   dq[0]
   - xmc_d1                      pd15         --->   dq[1]
   - xmc_d2                      pd0          --->   dq[2]
