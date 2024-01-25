@@ -132,7 +132,7 @@ extern "C" {
   */
 #define __AT32F403_LIBRARY_VERSION_MAJOR    (0x02) /*!< [31:24] major version */
 #define __AT32F403_LIBRARY_VERSION_MIDDLE   (0x00) /*!< [23:16] middle version */
-#define __AT32F403_LIBRARY_VERSION_MINOR    (0x08) /*!< [15:8]  minor version */
+#define __AT32F403_LIBRARY_VERSION_MINOR    (0x09) /*!< [15:8]  minor version */
 #define __AT32F403_LIBRARY_VERSION_RC       (0x00) /*!< [7:0]  release candidate */
 #define __AT32F403_LIBRARY_VERSION          ((__AT32F403_LIBRARY_VERSION_MAJOR << 24)  | \
                                              (__AT32F403_LIBRARY_VERSION_MIDDLE << 16) | \
@@ -243,7 +243,7 @@ typedef enum IRQn
     TMR15_BRK_IRQn              = 68,     /*!< tmr15 brake interrupt                                */
     TMR15_OVF_IRQn              = 69,     /*!< tmr15 overflow interrupt                             */
     TMR15_TRG_HALL_IRQn         = 70,     /*!< tmr15 trigger and hall interrupt                     */
-    TMR15_IRQn                  = 71,     /*!< tmr15 channel interrupt                              */
+    TMR15_IRQn                  = 71      /*!< tmr15 channel interrupt                              */
 
 } IRQn_Type;
 
